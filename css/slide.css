@@ -1,0 +1,209 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.slide-wrapper {
+  overflow: hidden;
+}
+
+.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slide:hover {
+  will-change: transform;
+}
+
+.slide li {
+  width: 80vw;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  max-width: 800px;
+  margin: 0 20px;
+
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  opacity: 0.8;
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slide li.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.arrow-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.5em;
+}
+
+.arrow-nav button {
+  margin-left: 1em;
+  border: 0;
+  background: 0;
+  margin-top: 10px;
+  outline: 0;
+}
+
+.arrow-nav button.prev::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 5px;
+  background: #000;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.arrow-nav button.prev::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 5px;
+  background: #000;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: 6px;
+}
+
+.arrow-nav button.prev:hover::before {
+  background: #555;
+}
+
+.arrow-nav button.prev:hover::after {
+  background: #555;
+}
+
+.arrow-nav button.next::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 5px;
+  background: #000;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arrow-nav button.next::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 5px;
+  background: #000;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 6px;
+}
+
+.arrow-nav button.next:hover::before {
+  background: #555;
+}
+
+.arrow-nav button.next:hover::after {
+  background: #555;
+}
+
+[data-control="slide"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.5em;
+}
+
+[data-control="slide"] li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #333;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 5px;
+}
+
+[data-control="slide"] li.active a,
+[data-control="slide"] li a:hover {
+  background: #555;
+}
+
+.custom-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.custom-controls li {
+  opacity: 0.8;
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.custom-controls li.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
